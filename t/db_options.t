@@ -2,13 +2,13 @@ use strict;
 use warnings;
 
 use Test::More;
-use lib 'dbt/lib';
+use lib 't/lib';
 
 use_ok( 'BookDB::Form::User');
 use_ok( 'BookDB::Schema');
 use_ok( 'BookDB::Form::BookWithOwner' );
 
-my $schema = BookDB::Schema->connect('dbi:SQLite:dbt/db/book.db');
+my $schema = BookDB::Schema->connect('dbi:SQLite:t/db/book.db');
 ok($schema, 'get db schema');
 
 my $user = $schema->resultset('User')->find( 1 );

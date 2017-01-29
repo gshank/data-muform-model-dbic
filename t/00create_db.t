@@ -3,8 +3,8 @@ use warnings;
 use Test::More tests => 1;
 use Path::Class;
 
-my $db_file = file( qw/ dbt db book.db / );
-my $sql_file = file( qw/ dbt db bookdb.sql / );
+my $db_file = file( qw/ t db book.db / );
+my $sql_file = file( qw/ t db bookdb.sql / );
 
 unlink $db_file or die "Cannot delete old database: $!" if -f $db_file;
 

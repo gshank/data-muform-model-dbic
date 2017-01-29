@@ -2,11 +2,11 @@ use strict;
 use warnings;
 
 use Test::More;
-use lib 'dbt/lib';
+use lib 't/lib';
 
 use BookDB::Schema;
 
-my $schema = BookDB::Schema->connect('dbi:SQLite:dbt/db/book.db');
+my $schema = BookDB::Schema->connect('dbi:SQLite:t/db/book.db');
 my $user = $schema->resultset('User')->find(1);
 
 {

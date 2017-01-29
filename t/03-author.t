@@ -2,10 +2,10 @@ use strict;
 use warnings;
 use Test::More;
 
-use lib 'dbt/lib';
+use lib 't/lib';
 use BookDB::Schema;
 use_ok('BookDB::Form::Author');
-my $schema = BookDB::Schema->connect('dbi:SQLite:dbt/db/book.db');
+my $schema = BookDB::Schema->connect('dbi:SQLite:t/db/book.db');
 ok($schema, 'get db schema');
 my $author = $schema->resultset('Author')->find(1);
 
