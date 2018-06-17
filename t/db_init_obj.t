@@ -1,7 +1,7 @@
 use Test::More;
 use lib 't/lib';
 
-use_ok('HTML::FormHandler::Model::DBIC');
+use_ok('Data::MuForm::Model::DBIC');
 
 use BookDB::Schema;
 
